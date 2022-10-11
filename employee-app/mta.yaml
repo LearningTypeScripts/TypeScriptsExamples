@@ -1,0 +1,21 @@
+_schema-version: "3.2"
+ID: employeedtlsApp
+version: 0.0.1
+
+modules:
+  - name: employeedtlsApp
+    type: nodejs
+    path: .
+    build-parameters:
+      builder: custom
+      commands:
+        - npm ci
+        - npm run build
+        - npm prune --include=dev
+    parameters:
+      buildpack: nodejs_buildpack
+      command: node dist/main
+      memory: 128M
+      routes:
+        - route: employeedtlsapp-${space}.${default-domain}
+        - route: memployeedtlsapp-${space}.cert.${default-domain}
