@@ -1,8 +1,10 @@
 # compiled output
-/dist
-/node_modules
-/mta_archives
-
+/employee-app/dist
+/employee-app/node_modules
+/user-dtls/dist
+/user-dtls/node_modules
+/employee-app/mta_archives
+/user-dtls/mta_archives
 # Logs
 logs
 *.log
