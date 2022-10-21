@@ -1,0 +1,21 @@
+_schema-version: "3.2"
+ID: userloginbysession
+version: 0.0.1
+
+modules:
+  - name: userloginbysession
+    type: nodejs
+    path: .
+    build-parameters:
+      builder: custom
+      commands:
+        - npm ci
+        - npm run build
+        - npm prune --include=dev
+    parameters:
+      buildpack: nodejs_buildpack
+      command: node dist/main
+      memory: 128M
+      routes:
+        - route: userloginbysession-${space}.${default-domain}
+        - route: userloginbysession-${space}.cert.${default-domain}

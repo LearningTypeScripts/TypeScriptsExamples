@@ -1,13 +1,18 @@
 # compiled output
 /employee-app/dist
-/employee-app/node_modules
+/user-dtls-authorization/dist
 /user-dtls/dist
 /user-dtls-jwt/dist
+
+/employee-app/node_modules
+/user-dtls-authorization/node_modules
 /user-dtls/node_modules
 /user-dtls-jwt/node_modules
+
 /employee-app/mta_archives
 /user-dtls/mta_archives
 /user-dtls-jwt/mta_archives
+/user-dtls-authorization/mta_archives
 # Logs
 logs
 *.log

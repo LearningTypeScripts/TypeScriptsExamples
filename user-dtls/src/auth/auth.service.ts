@@ -11,7 +11,6 @@ export class AuthService {
 
        if(usr && usr.password == password){
         const {password, username, ...rest} = usr;
-        //console.log(rest);
         return rest;
        }
        return null;

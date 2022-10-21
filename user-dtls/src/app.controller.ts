@@ -13,16 +13,12 @@ export class AppController {
   @UseGuards(LocalAuthGuard)
   @Post('login')
   login(@Request() req): any {
- //return req.user;
   return {msg : "Logged in Successful !!"}; 
-  //return "Login Successful for userId  "+ req.user.id +" name "+ req.user.name;
   }
 
   @UseGuards(AuthenticateGaurd)
   @Get('hello')
   getHello(@Request() req): string {
     return req.user;
-   //return {mesage : "Logged in Successful !!"}; 
-    //return this.appService.getHello();
   }
 }
