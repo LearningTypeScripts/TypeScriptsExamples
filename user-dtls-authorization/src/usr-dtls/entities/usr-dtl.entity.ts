@@ -1,1 +1,5 @@
-export class UsrDtl {}
+export class UsrDtl {
+    name: string;
+    roles: string[];
+}
+ 

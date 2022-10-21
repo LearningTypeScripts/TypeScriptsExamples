@@ -4,6 +4,7 @@ import { UsrDtlsController } from './usr-dtls.controller';
 
 @Module({
   controllers: [UsrDtlsController],
-  providers: [UsrDtlsService]
+  providers: [UsrDtlsService],
+  exports: [UsrDtlsService]
 })
 export class UsrDtlsModule {}
