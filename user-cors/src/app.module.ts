@@ -1,21 +1,11 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { UsersModule } from './users/users.module';
-import { AuthModule } from './auth/auth.module';
+import { UserInfoModule } from './user-info/user-info.module';
 
 @Module({
-  imports: [UsersModule, AuthModule],
+  imports: [UserInfoModule],
   controllers: [AppController],
   providers: [AppService],
 })
 export class AppModule {}
-
-
-/*
-  {
-    provide: APP_GUARD,
-    useClass: RolesGuard,
-  }
-*/
-
