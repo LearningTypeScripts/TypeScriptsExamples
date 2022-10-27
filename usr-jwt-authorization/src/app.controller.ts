@@ -33,7 +33,7 @@ export class AppController {
     return req.user;
   }
 
-  @Roles(Role.USER)
+  @Roles(Role.GUEST)
   @UseGuards(JwtAuthenticationGuard, RolesGuard)
   @Get('user')
   getUserAuth(@Request() req){

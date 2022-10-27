@@ -18,7 +18,7 @@ export class UsersService {
             name: 'ABC',
             username:'abc',
             password:'abcpass',
-            roles: [Role.USER]
+            roles: [Role.GUEST]
         },
      ];
 
