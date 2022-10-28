@@ -21,7 +21,6 @@ export class UsersService {
             roles: [Role.GUEST]
         },
      ];
-
      async findOne(username: string): Promise<User | undefined> {
         return this.users.find(usr => usr.username === username);
      }

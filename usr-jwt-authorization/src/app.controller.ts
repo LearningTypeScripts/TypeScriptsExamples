@@ -15,29 +15,28 @@ export class AppController {
 
   @UseGuards(LocalAuthGuard)
   @Post('login')
- async login(@Request() req) {
+ async login(@Request() req) { //1st
     return this.authService.login(req.user);
     //return "Login Successful for userId  "+ req.user.id +" name "+ req.user.name;
   }
 
   @UseGuards(JwtAuthenticationGuard)
   @Get('hello')
-  getHello(@Request() req): string {
+  getHello(@Request() req): string { //2nd
     return req.user;
   }
 
   @Roles(Role.ADMIN)
   @UseGuards(JwtAuthenticationGuard, RolesGuard)
   @Get('admin')
-  getAdminAuth(@Request() req) {
+  getAdminAuth(@Request() req) { //3rd
     return req.user;
   }
 
   @Roles(Role.GUEST)
   @UseGuards(JwtAuthenticationGuard, RolesGuard)
   @Get('user')
-  getUserAuth(@Request() req){
+  getUserAuth(@Request() req){ //4th
     return req.user;
   }
-
 }
